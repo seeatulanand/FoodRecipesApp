@@ -1,7 +1,6 @@
 package com.example.foodrecipesapp.adapter;
 
 import android.net.Uri;
-
 import android.view.View;
 import android.widget.TextView;
 
