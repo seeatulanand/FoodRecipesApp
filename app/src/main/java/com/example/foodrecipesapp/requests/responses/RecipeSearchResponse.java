@@ -2,9 +2,10 @@ package com.example.foodrecipesapp.requests.responses;
 
 import androidx.annotation.Nullable;
 
-import com.example.foodrecipesapp.models.Recipes;
+import com.example.foodrecipesapp.models.Recipe;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class RecipeSearchResponse {
 
     @SerializedName("recipes")
     @Expose
-    private List<Recipes> recipes;
+    private List<Recipe> recipes;
 
     public String getCount() {
         return count;
@@ -30,7 +31,7 @@ public class RecipeSearchResponse {
         return error;
     }
     @Nullable
-    public List<Recipes> getRecipes() {
+    public List<Recipe> getRecipes() {
         return recipes;
     }
 

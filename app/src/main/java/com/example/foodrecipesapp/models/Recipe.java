@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import java.util.Arrays;
 
-public class Recipes implements Parcelable  {
+public class Recipe implements Parcelable  {
     private String recipe_id;
     private String title;
     private String publisher;
@@ -14,7 +14,7 @@ public class Recipes implements Parcelable  {
     private String[] ingredients;
     private int timestamp;
 
-    protected Recipes(Parcel in) {
+    protected Recipe(Parcel in) {
         recipe_id = in.readString();
         title = in.readString();
         publisher = in.readString();
@@ -24,15 +24,15 @@ public class Recipes implements Parcelable  {
         timestamp = in.readInt();
     }
 
-    public static final Creator<Recipes> CREATOR = new Creator<Recipes>() {
+    public static final Creator<Recipe> CREATOR = new Creator<Recipe>() {
         @Override
-        public Recipes createFromParcel(Parcel in) {
-            return new Recipes(in);
+        public Recipe createFromParcel(Parcel in) {
+            return new Recipe(in);
         }
 
         @Override
-        public Recipes[] newArray(int size) {
-            return new Recipes[size];
+        public Recipe[] newArray(int size) {
+            return new Recipe[size];
         }
     };
 
@@ -49,10 +49,10 @@ public class Recipes implements Parcelable  {
                 '}';
     }
 
-    public Recipes() {
+    public Recipe() {
     }
 
-    public Recipes(String recipe_id, String title, String publisher, String image_url, float social_rank, String[] ingredients, int timestamp) {
+    public Recipe(String recipe_id, String title, String publisher, String image_url, float social_rank, String[] ingredients, int timestamp) {
         this.recipe_id = recipe_id;
         this.title = title;
         this.publisher = publisher;
