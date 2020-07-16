@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import java.util.Arrays;
 
-public class Recipe implements Parcelable  {
+public class Recipe implements Parcelable{
     private String recipe_id;
     private String title;
     private String publisher;
@@ -13,6 +13,62 @@ public class Recipe implements Parcelable  {
     private float social_rank;
     private String[] ingredients;
     private int timestamp;
+
+    public String getRecipe_id() {
+        return recipe_id;
+    }
+
+    public void setRecipe_id(String recipe_id) {
+        this.recipe_id = recipe_id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
+
+    public float getSocial_rank() {
+        return social_rank;
+    }
+
+    public void setSocial_rank(float social_rank) {
+        this.social_rank = social_rank;
+    }
+
+    public String[] getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String[] ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public int getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(int timestamp) {
+        this.timestamp = timestamp;
+    }
 
     protected Recipe(Parcel in) {
         recipe_id = in.readString();
