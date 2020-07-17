@@ -60,4 +60,8 @@ dependencies {
         // Excludes the support library because it's already included by Glide.
         transitive = false
     }
+
+    // Room
+    implementation "android.arch.persistence.room:runtime:$lifecycle_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$lifecycle_version"
 }
