@@ -7,9 +7,10 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-public class RecipeListViewModel extends AndroidViewModel {
+public class RecipeListViewModel extends AndroidViewModel
+{
     public enum ViewState {CATEGORIES, RECIPES}
-
+    public static final String QUERY_EXHAUSTED = "No more results.";
     private MutableLiveData<ViewState> viewState;
 
     public RecipeListViewModel(@NonNull Application application) {

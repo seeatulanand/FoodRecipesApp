@@ -13,7 +13,7 @@ public class RecipeSearchResponse {
 
     @SerializedName("count")
     @Expose
-    private String count;
+    private int count;
     @SerializedName("error")
     @Expose
     private String error;
@@ -23,7 +23,7 @@ public class RecipeSearchResponse {
     @Expose
     private List<Recipe> recipes;
 
-    public String getCount() {
+    public int getCount() {
         return count;
     }
 
