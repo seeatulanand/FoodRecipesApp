@@ -2,6 +2,7 @@ package com.example.foodrecipesapp.adapter;
 
 import android.net.Uri;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.RequestManager;
 import com.example.foodrecipesapp.R;
 import com.example.foodrecipesapp.models.Recipe;
+import com.example.foodrecipesapp.util.Constants;
+
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -17,6 +20,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class CategoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     CircleImageView categoryImage;
+    //ImageView categoryImage;
+
     TextView categoryTitle;
     OnRecipeListener listener;
     RequestManager requestManager;
@@ -36,7 +41,7 @@ public class CategoryViewHolder extends RecyclerView.ViewHolder implements View.
 
     public void onBind(Recipe recipe){
 
-        Uri path = Uri.parse("android.resource://com.codingwithmitch.foodrecipes/drawable/" + recipe.getImage_url());
+        Uri path = Uri.parse("android.resource://com.example.foodrecipesapp/drawable/" + recipe.getImage_url());
         requestManager
                 .load(path)
                 .into(categoryImage);
